@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/test_helper'
 
 class YamlObject < YamlRecord::Base
   properties :title, :body, :child_ids
-  source File.dirname(__FILE__) + "/../tmp/yaml_object"
+  source File.dirname(__FILE__) + "/tmp/yaml_object"
 end
 
 class BaseTest < Test::Unit::TestCase
