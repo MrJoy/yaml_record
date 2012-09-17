@@ -107,10 +107,16 @@ class BaseTest < Test::Unit::TestCase
       should("return id of record") { assert_equal(@fs.to_param, @fs.id) }
     end
 
-    context "for HashWithIndifferentAccess" do
+    context "for works with HashWithIndifferentAccess" do
       hash = ActiveSupport::HashWithIndifferentAccess.new(:child_ids => ["1234"], :title =>  "Test hash with indifferent access", :body => "Body!!!")
 
       should("not raise an exception") { assert_nothing_raised(NoMethodError) { YamlObject.create(hash) } }
+    end
+
+    context "for to_key method" do
+      setup { @fs.id = "589" }
+
+      should("return id of record") { assert_equal(@fs.to_key, [@fs.id]) }
     end
   end
 

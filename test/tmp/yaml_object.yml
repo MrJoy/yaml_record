@@ -1,6 +1,11 @@
 ---
-- :title: Toto
-  :body: http://somewhereelse.com
+- :title: Simple Title
+  :body: Body!!
   :child_ids:
   - '1234'
-  :id: aede37c6efb711d07185a2338a2919
+  :id: 23cf41b984c202a98f8440955651bc
+- :title: Test hash with indifferent access
+  :body: Body!!!
+  :child_ids:
+  - '1234'
+  :id: 604ea87ba224fb45c471e11d7e2e5b

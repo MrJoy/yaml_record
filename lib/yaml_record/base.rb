@@ -204,6 +204,18 @@ module YamlRecord
       self.id
     end
 
+    # Returns this record's primary key value
+    # wrapped in an Array if one is available
+    #
+    # === Example:
+    #
+    #   @post.to_key => [<id>]
+    #
+    def to_key
+      key = self.id
+      [key] if key
+    end
+
     # Reload YamlRecord instance attributes from file
     #
     # === Example:
