@@ -159,6 +159,18 @@ module YamlRecord
       self.is_destroyed
     end
 
+    # Returns true if YamlRecord has been persisted; false otherwise
+    #
+    # === Example:
+    #
+    #   @post = Post.new(:foo => "bar", :miso => "great")
+    #   @post.persisted? => false
+    #   @post.save
+    #   @post.persisted? => true
+    def persisted?
+      !(new_record? || destroyed?)
+    end
+
     # Remove a persisted YamlRecord object
     # Returns true if destroyed; false otherwise
     #

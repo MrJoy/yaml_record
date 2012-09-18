@@ -85,6 +85,14 @@ class BaseTest < Test::Unit::TestCase
       should("not be destroyed") { assert_false @fs.destroyed? }
     end
 
+    context "for persisted? method" do
+      setup do
+        @fs4 = YamlObject.create(@attr)
+      end
+      should("be persisted") { assert @fs4.persisted? }
+      should("not be destroyed") { assert_false @fs.destroyed? }
+    end
+
     context "for destroy method" do
       setup do
         @fs5 = YamlObject.create(@attr)
