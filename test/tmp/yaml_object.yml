@@ -3,9 +3,9 @@
   :body: Body!!
   :child_ids:
   - '1234'
-  :id: e8d6b05baa231724199d6947f2d297
+  :id: 0dc650ff20b936d3375b61c7f05971
 - :title: Test hash with indifferent access
   :body: Body!!!
   :child_ids:
   - '1234'
-  :id: 00bfab4827bdd05277559366acf39f
+  :id: 4dc687c6c1df24336b0b27bee359c2

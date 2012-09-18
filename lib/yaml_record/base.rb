@@ -37,6 +37,7 @@ module YamlRecord
 
       self.attributes ||= {}
       self.is_created = attr_hash.delete(:persisted) || false
+      self.is_destroyed = false
       attr_hash.each do |k,v|
         self.send("#{k}=", v) # self.attributes[:media] = "foo"
       end
@@ -86,6 +87,7 @@ module YamlRecord
 
           raw_data = existing_items ? existing_items.map { |item| item.persisted_attributes } : []
           self.class.write_contents(raw_data) if self.valid?
+          self.is_created = true if self.new_record?
         end
       end
 
