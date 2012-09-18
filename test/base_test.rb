@@ -169,6 +169,16 @@ class BaseTest < Test::Unit::TestCase
       should("return @fs2"){ assert_equal YamlObject.last(2).last.attributes, @fs2.attributes }
     end
 
+    context "for self.count method" do
+      setup do
+        clean_yaml_record(YamlObject)
+
+        @fs, @fs2 = YamlObject.create(@attr), YamlObject.create(@attr2)
+      end
+
+      should("return value 2"){ assert_equal YamlObject.count, 2 }
+    end
+
     context "for self.write_contents method" do
       setup do
         clean_yaml_record(YamlObject)

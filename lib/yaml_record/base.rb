@@ -323,6 +323,19 @@ module YamlRecord
       end
     end
 
+    # Return quantity of records persisted
+    #
+    # === Example:
+    #
+    #   Post.create(:foo => "bar", :miso => "great")
+    #   Post.create(:foo => "bar2", :miso => "ok")
+    #
+    #   Post.count => 2
+    #
+    def self.count
+      self.all.length
+    end
+
     # Declares persisted attributes for YamlRecord class
     #
     # === Example:
