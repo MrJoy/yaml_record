@@ -92,7 +92,7 @@ module YamlRecord
       end
 
       self.is_created ? block.call : run_callbacks(:create) { block.call }
-      true
+      return self.valid?
     rescue IOError
       false
     end
