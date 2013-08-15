@@ -6,9 +6,9 @@ Gem::Specification.new do |s|
   s.name        = "yaml_record"
   s.version     = YamlRecord::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Nico Taing", "Nathan Esquenazi"]
-  s.email       = ["nico@gomiso.com"]
-  s.homepage    = "https://github.com/nico-taing/yaml_record"
+  s.authors     = ["Jon Frisby", "Nico Taing", "Nathan Esquenazi"]
+  s.email       = ["jfrisby@mrjoy.com", "nico@gomiso.com"]
+  s.homepage    = "https://github.com/MrJoy/yaml_record"
   s.summary     = %q{YAML file persistence engine}
   s.description = %q{Use YAML for persisted data with ActiveModel interface}
 
