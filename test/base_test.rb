@@ -48,7 +48,7 @@ class BaseTest < Test::Unit::TestCase
         @fs2.save
       end
 
-      should("save on yaml file"){ assert_equal YamlObject.last.attributes.diff(@attr), {:id => @fs2.reload.id } }
+      should("save on yaml file"){ assert_equal YamlObject.last.attributes, @attr.merge({:id => @fs2.reload.id }) }
     end
 
     context "for update_attributes method" do
