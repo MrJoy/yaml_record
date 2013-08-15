@@ -9,16 +9,14 @@ require 'active_model'
 
 module YamlRecord
   class Base
+    include ActiveModel::Model
     include ActiveModel::Validations
-    extend ActiveModel::Naming # Required dependency for ActiveModel::Errors
-    extend ActiveModel::Callbacks
 
     define_model_callbacks :save, :create, :destroy, :only => [:after, :before]
 
     before_create :set_id!
 
     attr_accessor :attributes, :is_created, :is_destroyed
-    attr_reader   :errors
 
     # Constructs a new YamlRecord instance based on specified attribute hash
     #
