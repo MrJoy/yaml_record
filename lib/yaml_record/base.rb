@@ -12,7 +12,7 @@ module YamlRecord
     include ActiveModel::Model
     include ActiveModel::Validations
 
-    define_model_callbacks :save, :create, :destroy, :only => [:after, :before]
+    define_model_callbacks :save, :create, :destroy
 
     before_create :set_id!
 
